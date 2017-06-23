@@ -4,10 +4,16 @@ import java.util.Scanner;
 
 public class Problema {
 
-	public static String executaAcao(String comando){
+	public static String chamaAcao(String comando){
 		String comandoFinal = "";
 		String oldCommand = comando;
 		
+		while(oldCommand.length() != 0){
+			comando = oldCommand.substring(0, 1);
+			oldCommand = oldCommand.substring(1, oldCommand.length());
+			
+			executaAcao(comando);
+		}
 		
 		return comandoFinal;
 	}
@@ -19,7 +25,7 @@ public class Problema {
 		String commands = input.next();
 		input.close();
 		
-		executaAcao(commands);
+		chamaAcao(commands);
 	}
 
 }
