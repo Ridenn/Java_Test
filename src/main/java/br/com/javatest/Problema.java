@@ -9,8 +9,14 @@ public class Problema {
 	public static String chamaAcao(String comando){
 		String comandoFinal = "";
 		String oldCommand = comando;
-		int x, y, z = 0;
+		int x = 0, y = 0, z = 0;
 		int aux = 0;
+		
+		Map<Integer, String> direcao = new HashMap<Integer, String>();
+		direcao.put(0, "NORTE");
+		direcao.put(1, "LESTE");
+		direcao.put(2, "SUL");
+		direcao.put(3, "OESTE");
 		
 		while(oldCommand.length() != 0){
 			comando = oldCommand.substring(0, 1).toUpperCase();
@@ -18,10 +24,14 @@ public class Problema {
 			
 			switch (comando) {
 			case "L":
-				
+				aux--;
+				if(aux < 0)
+					aux = 3;
 				break;
 			case "R":
-				
+				aux++;
+				if(aux > 3)
+					aux = 0;
 				break;
 			case "M":
 				
