@@ -34,7 +34,15 @@ public class Problema {
 					aux = 0;
 				break;
 			case "M":
-				
+				if(aux % 2 == 0){
+					if(aux == 0)
+						y++;
+					y--;
+				}else{
+					if(aux == 1)
+						x++;
+					x--;
+				}
 				break;
 			case "U":
 				
