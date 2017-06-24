@@ -1,0 +1,15 @@
+-=Java Test v1.0=-
+
+- Foi usada a premissa de que se o submarino começa com os eixos em 0 e o eixo Z em 0 representa o nível da superfície
+e o submarino é um veículo aquático, o mesmo não conseguiria ir acima do nível do mar, ou seja, fazer com que o eixo Z fosse
+maior do que 0.
+
+Testes -
+	1: LMRDDMMUU
+	2: RMMLMMMDDLL
+	3: LMMMRMRRMMDDDU
+
+Retornos esperados -
+	1: -1 2 0 NORTE
+	2: 2 3 -2 SUL
+	3: -3 -1 -2 SUL
