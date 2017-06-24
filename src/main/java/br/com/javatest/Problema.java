@@ -7,7 +7,6 @@ import java.util.Scanner;
 public class Problema {
 
 	public static String chamaAcao(String comando){
-		String comandoFinal = "";
 		String oldCommand = comando;
 		int x = 0, y = 0, z = 0;
 		int aux = 0;
@@ -54,21 +53,11 @@ public class Problema {
 			default:
 				break;
 			}
-			
-//			executaAcao(comando);
 		}
 		
-		comandoFinal = x + " " + y + " " + z + " " + direcao.get(aux);
-		
-		return comandoFinal;
+		return x + " " + y + " " + z + " " + direcao.get(aux);
 	}
 	
-	
-//	private static void executaAcao(String comando) {
-//		
-//	}
-
-
 	public static void main(String[] args) {
 
 		Scanner input = new Scanner(System.in);
