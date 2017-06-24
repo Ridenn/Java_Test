@@ -35,35 +35,38 @@ public class Problema {
 				break;
 			case "M":
 				if(aux % 2 == 0){
-					if(aux == 0)
-						y++;
 					y--;
+					if(aux == 0)
+						y += 2;
 				}else{
-					if(aux == 1)
-						x++;
 					x--;
+					if(aux == 1)
+						x += 2;
 				}
 				break;
 			case "U":
-				
+				if(z < 0)					
+					z++;
 				break;
 			case "D":
-				
+				z--;				
 				break;
 			default:
 				break;
 			}
 			
-			executaAcao(comando);
+//			executaAcao(comando);
 		}
+		
+		comandoFinal = x + " " + y + " " + z + " " + direcao.get(aux);
 		
 		return comandoFinal;
 	}
 	
 	
-	private static void executaAcao(String comando) {
-		
-	}
+//	private static void executaAcao(String comando) {
+//		
+//	}
 
 
 	public static void main(String[] args) {
@@ -72,7 +75,7 @@ public class Problema {
 		String commands = input.next();
 		input.close();
 		
-		chamaAcao(commands);
+		System.out.println(chamaAcao(commands));
 	}
 
 }
